@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Defunction.Defunction" android:versionCode="1" android:versionName="1.0">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="16" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="Defunction" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Комбинаторика" android:theme="@android:style/Theme.Material.Light" android:name="md540a7827e236195c0840f233f9969b2d0.comb" />
+    <activity android:icon="@drawable/icon" android:label="Defunction" android:theme="@android:style/Theme.Material.Light" android:name="md540a7827e236195c0840f233f9969b2d0.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Defunction.Defunction.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.Defunction.Defunction" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
